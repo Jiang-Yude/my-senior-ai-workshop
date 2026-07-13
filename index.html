@@ -32,8 +32,11 @@
   .font-tool button:hover{background:var(--accent); color:#fff;}
   .font-tool .big{font-size:1.15rem;}
 
-  .hero{background:linear-gradient(180deg,#FBF6F0,#F5EDE7); padding:44px 0 16px;}
+  .hero{background:linear-gradient(180deg,#FBF6F0,#F5EDE7); padding:44px 0 28px; overflow:hidden;}
+  .hero-inner{display:grid; grid-template-columns:minmax(0,1fr) minmax(280px,0.82fr); gap:32px; align-items:center;}
   .hero h1{margin:14px 0 12px;}
+  .hero-art{margin:0; position:relative;}
+  .hero-art img{width:100%; max-width:430px; margin:0 auto; border-radius:20px; border:8px solid rgba(255,255,255,0.9); box-shadow:0 24px 50px rgba(78,52,46,0.22);}
   .hero+section{padding-top:24px;}
 
   /* 成品範例 */
@@ -77,6 +80,9 @@
 
   @media (max-width:560px){
     section{padding:34px 0;}
+    .hero{padding-top:30px;}
+    .hero-inner{grid-template-columns:1fr; gap:20px;}
+    .hero-art img{max-width:360px; border-width:6px;}
     .poster-row{grid-template-columns:1fr 1fr; gap:12px;}
     .poster{padding:8px;}
     .poster .cap{font-size:0.8rem;}
@@ -95,10 +101,16 @@
 
 <!-- Hero -->
 <header class="hero">
-  <div class="wrap">
-    <span class="eyebrow">樂齡 AI 工作坊 · 三小時</span>
-    <h1>拍一張照片，<br>做一部自己的電影</h1>
-    <p class="lead">給長輩的 AI 課，<b>一支手機就能完成</b>。用自己的故事和照片，做出電影海報和繪本。</p>
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow">AI 電腦研習 · 樂齡 AI 工作坊</span>
+      <h1>拍一張照片，<br>做一部自己的電影</h1>
+      <p class="lead">給長輩的 AI 課，<b>一支手機就能完成</b>。用自己的故事和照片，做出電影海報和繪本。</p>
+      <p class="sub">主辦單位：財團法人社區電腦推廣教育基金會</p>
+    </div>
+    <figure class="hero-art">
+      <img src="images/ai-computer-workshop-cover-2026-07-13.png" alt="AI 電腦研習樂齡 AI 工作坊招生海報，樂齡夫妻用手機與繪本創作自己的故事" fetchpriority="high">
+    </figure>
   </div>
 </header>
 
